@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://emzyjeppp.github.io/devflow-rules/sitemap.xml
+Sitemap: http://jeppp.is-a.dev/devflow-rules/sitemap.xml
