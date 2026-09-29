@@ -1,54 +1,54 @@
 ---
 name: devflow-orchestrator
-description: Orkestrator alur kerja pengembangan perangkat lunak 8 fase mulai dari penyusunan spesifikasi (PRD) hingga rilis dan serah terima.
+description: Orchestrator for an 8-phase software development lifecycle from requirements specification (PRD) to production release.
 ---
 
 # DevFlow Orchestrator
 
-Skill ini mengatur alur eksekusi proyek pengembangan aplikasi secara terstruktur, mencegah langkah penting terlewat, dan menyesuaikan kedalaman proses berdasarkan skala tugas.
+This skill orchestrates software development tasks in a structured sequence, ensuring essential engineering steps are covered while scaling process overhead according to task complexity.
 
-## Matriks Skala Tugas
+## Task Scale Matrix
 
-- **Skala Ringan (Teks / Styling)**: Identifikasi berkas, lakukan pengeditan langsung, verifikasi tampilan, dan catat perubahan.
-- **Skala Sedang (Fitur Tunggal)**: Susun kontrak props/data, buat komponen atau fungsi, integrasikan, dan uji alur kerja.
-- **Skala Penuh (Aplikasi Baru / Multi-Fitur)**: Jalankan alur delapan fase secara berurutan.
+- **Small Scale (Copy / Styling)**: Identify target files, apply direct modifications, verify rendering, and document changes.
+- **Medium Scale (Single Feature)**: Define props/data contracts, implement logic, integrate components, and test end-to-end user flows.
+- **Full Scale (New Application / Multi-Feature)**: Execute the complete 8-phase workflow sequentially.
 
-## Alur Kerja Delapan Fase
+## 8-Phase Development Workflow
 
-### Fase 1: Kebutuhan dan PRD
-- Tetapkan tujuan produk, profil pengguna sasaran, batasan teknis, dan fitur utama.
-- Buat dokumen spesifikasi singkat (`PRD.md`) jika proyek berskala menengah atau besar.
+### Phase 1: Requirements and PRD
+- Define product objectives, target user personas, technical boundaries, and primary features.
+- Create a concise specification document (`PRD.md`) for medium-to-large initiatives.
 
-### Fase 2: Fondasi Proyek
-- Siapkan struktur direktori, konfigurasi tooling (TypeScript, ESLint, Prettier, Tailwind).
-- Pastikan proyek dapat dijalankan secara lokal dengan perintah standar (`npm run dev` atau sejenisnya).
+### Phase 2: Project Foundation
+- Establish directory structure and configure project tooling (TypeScript, linters, formatters, build systems).
+- Ensure the project runs locally using standard commands (e.g., `npm run dev`).
 
-### Fase 3: Data dan Arsitektur
-- Rancang skema database, relasi entitas, dan model data.
-- Siapkan skrip migrasi dan mekanisme validasi integritas data jika aplikasi menggunakan penyimpanan persisten.
+### Phase 3: Data and Architecture
+- Design database schemas, entity relationships, and data models.
+- Prepare migration scripts and enforce data integrity validation.
 
-### Fase 4: Autentikasi dan API
-- Bangun lapisan layanan backend, endpoint REST/RPC, serta middleware otentikasi dan otorisasi.
-- Terapkan validasi input ketat pada setiap endpoint untuk mencegah data tidak valid.
+### Phase 4: Services and APIs
+- Build backend services, REST/RPC endpoints, and authentication/authorization middleware.
+- Enforce strict input validation on all endpoints to prevent malformed data.
 
-### Fase 5: Frontend dan Antarmuka
-- Terapkan komponen antarmuka pengguna, sistem routing, dan integrasi dengan API backend.
-- Sediakan penanganan status visual yang lengkap: loading, data kosong, error, dan data berhasil dimuat.
+### Phase 5: Frontend and User Interface
+- Implement UI components, page routing, and state management connected to backend APIs.
+- Provide comprehensive UI states: loading, empty dataset, error alerts, and success states.
 
-### Fase 6: Pengujian
-- Uji alur interaksi pengguna kritis (happy path dan failure path).
-- Jalankan automated tests atau validasi manual yang terstruktur dan catat hasilnya.
+### Phase 6: Testing
+- Validate critical user flows (happy paths and failure edge cases).
+- Run automated tests or structured manual verifications and record findings.
 
-### Fase 7: Penguatan Aplikasi
-- Periksa celah keamanan (sanitasi input, kebocoran token atau variabel lingkungan).
-- Optimalkan performa pemuatan aset, caching, dan kesiapan SEO bila relevan.
+### Phase 7: Application Hardening
+- Audit security vectors (input sanitization, environment variable protection, secret leaks).
+- Optimize bundle size, asset loading, caching, and SEO readiness where applicable.
 
-### Fase 8: Rilis dan Penyerahan
-- Jalankan proses build produksi (`npm run build`) untuk memastikan tidak ada kesalahan kompilasi.
-- Dokumentasikan variabel lingkungan yang dibutuhkan dan langkah deployment pada `README.md`.
+### Phase 8: Release and Handover
+- Execute the production build command (`npm run build`) to ensure zero compilation errors.
+- Document deployment procedures and required environment variables in `README.md`.
 
-## Catatan Kemajuan Proyek
+## Project Progress Tracking
 
-Pada proyek yang memerlukan pelacakan berkelanjutan, perbarui dokumen pelengkap:
-- `PROGRESS.md`: Catatan status fase dan daftar tugas yang sedang atau telah diselesaikan.
-- `CHANGELOG.md`: Log perubahan versi sesuai standar semantik.
+For projects requiring sustained progress tracking, update these companion documents:
+- `PROGRESS.md`: Phase status and completed/pending task checklists.
+- `CHANGELOG.md`: Semantic version changelog entries.

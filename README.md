@@ -1,19 +1,19 @@
 # DevFlow Rules
 
-Kumpulan aturan pengembangan dan skill siap pakai untuk AI coding assistant, dirancang untuk membangun antarmuka web yang konsisten, menjaga kode tetap sederhana dan terstruktur, serta menegakkan disiplin penulisan dan git workflow.
+A collection of development rules and ready-to-use skills for AI coding assistants. Designed to build consistent web interfaces, keep code minimal and maintainable, and enforce disciplined git workflows.
 
-Repositori ini mengintegrasikan praktik terbaik dari berbagai referensi terpercaya menjadi satu set aturan kerja terpadu dalam bahasa Indonesia.
+This repository consolidates battle-tested practices from DealTech UI, Vibes-Plug, Ponytail, nyancodeid commit conventions, and Humanize Pro into a single, unified ruleset.
 
-## Prinsip Utama
+## Core Principles
 
-1. **Komponen Antarmuka Konkret**: Mengadopsi hierarki elemen, section, dan halaman dengan adaptasi yang sesuai arsitektur proyek.
-2. **Pengembangan Bertahap**: Mengorkestrasi proyek melalui delapan fase terstruktur dari perencanaan (PRD) hingga rilis.
-3. **Kesederhanaan Solusi (Lean Code)**: Menerapkan prinsip YAGNI, memprioritaskan pustaka standar bahasa dan fitur bawaan platform sebelum menambah dependensi.
-4. **Disiplin Pesan Commit**: Format pesan commit terstandarisasi dengan tipe, cakupan, subjek, serta penjelasan perubahan yang jelas.
-5. **Bahasa Alami dan Faktual**: Menghilangkan klise atau pola artifisial keluaran AI dan menjaga kejelasan komunikasi teknis.
-6. **Bebas Emoji**: Menghindari emoji dan simbol dekoratif pada kode, antarmuka, pesan commit, dan dokumentasi.
+1. **Concrete UI Components**: Adopt clear component hierarchies (elements, sections, pages) and adapt them to project-specific architectures.
+2. **Phase-Driven Progression**: Orchestrate development across an 8-phase workflow from PRD specification to production release.
+3. **Lean Solutions (YAGNI)**: Prioritize standard library functions and native platform capabilities before adding external dependencies.
+4. **Structured Commit Messages**: Maintain conventional semantic commit formats with standard types, scopes, subjects, and clear change descriptions.
+5. **Natural and Factual Language**: Eliminate artificial AI writing clichés and maintain precise, active, and factual technical communication.
+6. **Zero-Emoji Discipline**: Avoid emojis and decorative symbols in code, user interfaces, commit messages, and documentation.
 
-## Struktur Repositori
+## Repository Structure
 
 ```text
 devflow-rules/
@@ -41,66 +41,64 @@ devflow-rules/
         `-- SKILL.md
 ```
 
-## Daftar Skill
+## Skills Catalog
 
-| Skill | Deskripsi | Berkas Utama |
+| Skill | Description | Entry Point |
 |---|---|---|
-| `dealtech-ui` | Panduan pemilihan dan adaptasi komponen antarmuka konkret berdasarkan hierarki element, section, dan page. | [skills/dealtech-ui/SKILL.md](skills/dealtech-ui/SKILL.md) |
-| `devflow-orchestrator` | Orkestrasi alur kerja pengembangan aplikasi 8 fase mulai dari penyusunan spesifikasi hingga rilis. | [skills/devflow-orchestrator/SKILL.md](skills/devflow-orchestrator/SKILL.md) |
-| `ponytail-lean` | Pencegahan over-engineering, penerapan prinsip YAGNI, dan prioritas pustaka standar runtime. | [skills/ponytail-lean/SKILL.md](skills/ponytail-lean/SKILL.md) |
-| `commit-nyancodeid` | Pedoman penyusunan pesan commit Git terstruktur mengikuti konvensi nyancodeid. | [skills/commit-nyancodeid/SKILL.md](skills/commit-nyancodeid/SKILL.md) |
-| `humanize-writing` | Panduan penulisan teks alami, lugas, dan bebas dari pola artifisial AI (Humanize Pro). | [skills/humanize-writing/SKILL.md](skills/humanize-writing/SKILL.md) |
-| `no-emoji` | Aturan larangan penggunaan emoji dan simbol dekoratif dengan alternatif SVG dan teks badge. | [skills/no-emoji/SKILL.md](skills/no-emoji/SKILL.md) |
+| `dealtech-ui` | Guidance on selecting and adapting concrete UI components based on element, section, and page hierarchies. | [skills/dealtech-ui/SKILL.md](skills/dealtech-ui/SKILL.md) |
+| `devflow-orchestrator` | 8-phase development workflow orchestration from initial requirements (PRD) to release. | [skills/devflow-orchestrator/SKILL.md](skills/devflow-orchestrator/SKILL.md) |
+| `ponytail-lean` | Anti-overengineering rules, YAGNI enforcement, and standard library prioritization. | [skills/ponytail-lean/SKILL.md](skills/ponytail-lean/SKILL.md) |
+| `commit-nyancodeid` | Standardized Git commit message conventions adapted from nyancodeid guidelines. | [skills/commit-nyancodeid/SKILL.md](skills/commit-nyancodeid/SKILL.md) |
+| `humanize-writing` | Natural, concise, and non-artificial writing guidelines for technical and UI communication. | [skills/humanize-writing/SKILL.md](skills/humanize-writing/SKILL.md) |
+| `no-emoji` | Rules prohibiting decorative symbols and emojis, with inline SVG and text-badge alternatives. | [skills/no-emoji/SKILL.md](skills/no-emoji/SKILL.md) |
 
-## Cara Penggunaan
+## Usage Guidelines
 
-Dokumen dalam repositori ini dapat digunakan dengan beberapa pendekatan sesuai alat yang Anda gunakan:
+You can integrate these rules into your workflow through several methods depending on your development environment:
 
-### 1. Penggunaan Manual (Salin Teks ke Prompt)
-Salin isi [RULES.md](RULES.md) atau `SKILL.md` yang relevan ke dalam prompt percakapan dengan AI asisten Anda saat memulai tugas.
+### 1. Manual Prompt Injection
+Copy the contents of [RULES.md](RULES.md) or specific `SKILL.md` files directly into your AI coding assistant prompt when starting a task.
 
-### 2. Konfigurasi Aturan Proyek (Cursor, Windsurf, Claude Code, Copilot)
-Tambahkan referensi atau salin isi [RULES.md](RULES.md) ke berkas konfigurasi instruksi proyek Anda:
-- **Cursor**: Salin ke `.cursorrules` atau folder `.cursor/rules/`.
-- **Windsurf**: Salin ke `.windsurfrules`.
-- **Claude Code**: Salin atau tautkan ke `CLAUDE.md`.
-- **GitHub Copilot**: Masukkan ke dalam `.github/copilot-instructions.md`.
+### 2. Project Rule Configuration (Cursor, Windsurf, Claude Code, Copilot)
+Attach or reference [RULES.md](RULES.md) in your project instruction files:
+- **Cursor**: Copy to `.cursorrules` or `.cursor/rules/`.
+- **Windsurf**: Copy to `.windsurfrules`.
+- **Claude Code**: Copy or link inside `CLAUDE.md`.
+- **GitHub Copilot**: Place into `.github/copilot-instructions.md`.
 
-### 3. Pemasangan Folder Skill pada Asisten Agentic
-Jika asisten AI Anda mendukung pemuatan folder skill (seperti Antigravity atau framework agen sejenis), Anda dapat menyalin folder `skills/` ke direktori skill asisten atau mereferensikannya langsung dalam workspace.
+### 3. Agentic Skill Directory
+If your AI coding agent supports directory-based skill discovery (such as Antigravity or compatible agentic frameworks), copy the `skills/` folder into your custom skills directory.
 
-> Catatan: Repositori ini berupa kumpulan panduan dan aturan berbasis Markdown. Membaca atau menyalin berkas ini tidak secara otomatis memasang runtime, paket npm, atau plugin eksternal baru ke sistem Anda.
+> Note: This repository contains markdown-based rules and instructions. Reading or referencing these files does not automatically install runtime packages or external plugins.
 
-## Contoh Prompt
+## Prompt Examples
 
-Berikut contoh instruksi yang dapat Anda berikan kepada AI coding assistant bersama repositori ini:
-
-### Membangun Fitur Baru
+### Building a New Feature
 ```text
-Gunakan pedoman RULES.md dalam repositori ini. Buat komponen tabel data pengguna dengan fitur pencarian dan paginasi menggunakan Tailwind CSS. Terapkan prinsip ponytail-lean untuk menjaga kode tetap minimalis dan no-emoji untuk semua status antarmuka.
+Apply the guidelines in RULES.md. Build a responsive user data table component with search filtering and pagination using Tailwind CSS. Follow ponytail-lean principles to keep the code minimal and no-emoji for all UI states.
 ```
 
-### Menyusun Pesan Commit
+### Composing a Commit Message
 ```text
-Berdasarkan perubahan kode saat ini, buatkan pesan commit yang mematuhi pedoman skills/commit-nyancodeid/SKILL.md. Pastikan tipe, scope, dan batasan panjang karakter terpenuhi tanpa emoji.
+Based on the current git diff, generate a commit message following skills/commit-nyancodeid/SKILL.md. Ensure proper type, scope, character limit, and no emojis.
 ```
 
-### Menyunting Teks Antarmuka
+### Polishing UI Copy
 ```text
-Tinjau teks notifikasi dan dialog konfirmasi pada file ini. Sesuaikan menggunakan panduan skills/humanize-writing/SKILL.md agar terdengar alami, ringkas, langsung ke tindakan, dan tanpa em dash.
+Review the modal confirmation messages in this file according to skills/humanize-writing/SKILL.md. Make the text concise, direct, action-oriented, and free of em dashes or artificial filler words.
 ```
 
-## Sumber dan Atribusi
+## Sources and Attribution
 
-Aturan dan skill dalam repositori ini disusun dan diadaptasi dari karya-karya berikut:
+The rules and skills in this repository are adapted from the following open references:
 
-- **DealTech UI**: Komponen antarmuka publik DealTech ([Deal-Tech/dealtech-ui-for-public-component](https://github.com/Deal-Tech/dealtech-ui-for-public-component)).
-- **Vibes-Plug**: Alur kerja orkestrasi dan arsitektur multi-agen oleh Roedy Rustam ([roedyrustam/vibes-plug](https://github.com/roedyrustam/vibes-plug)).
-- **Ponytail**: Prinsip kesederhanaan dan pencegahan over-engineering oleh Dietrich Gebert ([DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)).
-- **Pedoman Commit nyancodeid**: Format pesan commit terstandarisasi oleh nyancodeid ([Gist nyancodeid](https://gist.github.com/nyancodeid/63f19941c81252bb0cca9c14497cf9f7)).
-- **Humanize Pro**: Panduan bahasa alami dan eliminasi klise AI oleh msdanyg ([msdanyg/humanize-pro](https://github.com/msdanyg/humanize-pro)).
-- **Aturan Bebas Emoji**: Panduan penegakan antarmuka dan basis kode bebas karakter simbol dekoratif.
+- **DealTech UI**: Public UI component collection ([Deal-Tech/dealtech-ui-for-public-component](https://github.com/Deal-Tech/dealtech-ui-for-public-component)).
+- **Vibes-Plug**: Multi-agent orchestration workflows by Roedy Rustam ([roedyrustam/vibes-plug](https://github.com/roedyrustam/vibes-plug)).
+- **Ponytail**: Minimalist software engineering and anti-overengineering rules by Dietrich Gebert ([DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)).
+- **nyancodeid Commit Guidelines**: Conventional commit message structure by nyancodeid ([Gist nyancodeid](https://gist.github.com/nyancodeid/63f19941c81252bb0cca9c14497cf9f7)).
+- **Humanize Pro**: Natural language writing and AI-tell removal guide by msdanyg ([msdanyg/humanize-pro](https://github.com/msdanyg/humanize-pro)).
+- **Zero-Emoji Discipline**: Standards for symbol-free interfaces and codebases.
 
-## Lisensi
+## License
 
-Repositori ini didistribusikan di bawah lisensi [MIT](LICENSE).
+This repository is distributed under the [MIT](LICENSE) License.

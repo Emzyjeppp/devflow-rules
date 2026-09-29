@@ -1,8 +1,8 @@
-# Referensi Ikon SVG Inline
+# Inline SVG Icons Reference
 
-Gunakan cuplikan SVG standar berikut sebagai pengganti karakter simbol dekoratif atau emoji. Gunakan `currentColor` agar warna otomatis mengikuti teks induk.
+Use these clean, standard inline SVG snippets instead of unicode symbol characters or emojis. Use `currentColor` so icon strokes automatically inherit the parent text color.
 
-## 1. Ikon Centang (Checkmark)
+## 1. Checkmark Icon
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -10,7 +10,7 @@ Gunakan cuplikan SVG standar berikut sebagai pengganti karakter simbol dekoratif
 </svg>
 ```
 
-## 2. Ikon Silang / Tutup (Close / Cross)
+## 2. Close / Cross Icon
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -19,7 +19,7 @@ Gunakan cuplikan SVG standar berikut sebagai pengganti karakter simbol dekoratif
 </svg>
 ```
 
-## 3. Ikon Peringatan (Alert Triangle)
+## 3. Warning / Alert Triangle Icon
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -29,7 +29,7 @@ Gunakan cuplikan SVG standar berikut sebagai pengganti karakter simbol dekoratif
 </svg>
 ```
 
-## 4. Ikon Panah Kanan (Arrow Right)
+## 4. Arrow Right Icon
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
@@ -38,7 +38,7 @@ Gunakan cuplikan SVG standar berikut sebagai pengganti karakter simbol dekoratif
 </svg>
 ```
 
-## 5. Ikon Spinner Loading
+## 5. Loading Spinner Icon
 
 ```html
 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="animate-spin" aria-hidden="true">

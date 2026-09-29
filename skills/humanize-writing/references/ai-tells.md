@@ -1,27 +1,26 @@
-# Pola Bahasa Artifisial (AI Tells) yang Perlu Dihindari
+# Artificial Writing Patterns (AI Tells) to Avoid
 
-Dokumen ini mencatat pola kalimat, kata klise, dan struktur yang sering muncul secara berulang dari luaran AI dan harus dihindari agar teks terdengar natural.
+This document catalogs recurring phrasing, clichés, and structures typical of raw AI generation that must be eliminated to ensure natural, readable writing.
 
-## 1. Kata dan Frasa Klise
+## 1. Cliché Words and Phrases
 
-Hindari penggunaan kata-kata berikut:
-- "membuka pintu menuju...", "membuka jalan..."
-- "merevolusi cara kita...", "mengubah lanskap..."
-- "fondasi yang kokoh", "pilar fundamental"
-- "pada era digital yang terus berkembang ini"
-- "tak dapat dipungkiri bahwa...", "seperti yang kita ketahui bersama"
-- "dalam dunia yang serba cepat"
-- "sebagai kesimpulan,", "secara keseluruhan,"
-- "senjata rahasia", "game changer"
+Avoid the following terms:
+- "paving the way for...", "opening doors to..."
+- "revolutionizing how we...", "transforming the landscape of..."
+- "solid foundation", "vital pillar", "testament to..."
+- "in today's fast-paced digital world"
+- "it goes without saying that...", "as we all know"
+- "in conclusion,", "to wrap things up,", "all in all,"
+- "game changer", "secret weapon"
 
-## 2. Struktur Kalimat Monoton
+## 2. Monotonous Structures
 
-- **Pola Tiga Serangkai yang Dipaksakan**: Menyajikan argumen selalu dalam tepat tiga poin berima atau berparalel tanpa urgensi kebutuhan konten.
-- **Paragraf Pembuka Basa-Basi**: Mengulang pertanyaan pengguna dengan kalimat "Tentu, saya siap membantu Anda memahami hal tersebut...".
-- **Paragraf Penutup Retoris**: Menutup penjelasan dengan ringkasan moralistis atau pertanyaan retoris penutup yang tidak diminta.
+- **Forced Triads**: Constantly organizing arguments into exactly three parallel or rhyming points regardless of context.
+- **Filler Openings**: Paraphrasing the user's prompt with phrases like "Certainly! I would be delighted to help you explore...".
+- **Preachy Closings**: Concluding technical explanations with unsolicited philosophical summaries or rhetorical questions.
 
-## 3. Tanda Baca dan Gaya Bahasa
+## 3. Punctuation and Tone
 
-- **Em Dash (`—`)**: Jangan menggunakan em dash. Gunakan tanda koma, titik, titik dua, atau kurung.
-- **Pujian Berlebihan**: Menambahkan kata-kata seperti "luar biasa", "sangat menakjubkan", "sempurna" pada solusi teknis standar.
-- **Kepastian Semu**: Mengubah dugaan teknis menjadi klaim mutlak tanpa bukti atau pengukuran yang nyata.
+- **Em Dashes (`—`)**: Do not use em dashes. Use commas, periods, colons, or parentheses.
+- **Excessive Flattery**: Adding adjectives like "fantastic", "stellar", "seamless" to standard technical solutions.
+- **False Certainty**: Framing speculative technical hypotheses as absolute facts without verification or evidence.

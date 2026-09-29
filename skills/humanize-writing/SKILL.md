@@ -1,41 +1,41 @@
 ---
 name: humanize-writing
-description: Panduan penulisan teks alami, lugas, dan bebas dari pola artifisial AI (Humanize Pro) untuk dokumentasi, antarmuka, dan komunikasi teknis.
+description: Natural, direct, and non-artificial writing guidelines (Humanize Pro) for technical documentation, UI copy, and engineering communication.
 ---
 
 # Humanize Writing
 
-Skill ini memandu penulisan teks dalam bahasa Indonesia yang mengalir alami, ringkas, dan fokus pada substansi, menghilangkan klise dan pola khas teks buatan AI tanpa mengorbankan akurasi teknis.
+This skill guides the composition of natural, concise, and substance-focused writing, eliminating AI clichés and synthetic phrasing while preserving strict technical accuracy.
 
-## Prinsip Utama
+## Core Principles
 
-1. **Langsung ke Inti**: Mulai pesan dengan informasi terpenting. Hilangkan basa-basi pengantar ("Tentu, dengan senang hati...") dan penutup retoris.
-2. **Berbasis Fakta**: Jangan mengarang metrik, kutipan, atau cerita buatan agar terkesan manusiawi.
-3. **Bahasa Lugas dan Alami**: Gunakan kata-kata yang umum dipakai sehari-hari dalam konteks profesional.
-4. **Hindari Em Dash**: Jangan gunakan tanda baca em dash (`—`). Gunakan tanda titik, koma, titik dua, atau kurung.
-5. **Kontekstual Sesuai Kanal**: Sesuaikan gaya bahasa dengan tempat teks akan dibaca (antarmuka, dokumentasi, atau laporan teknis).
+1. **Lead with Value**: Begin with the primary message immediately. Remove greeting pleasantries ("Sure, I would be happy to help...") and formulaic concluding summaries.
+2. **Fact-Driven Content**: Never invent fake metrics, names, or testimonials to sound relatable.
+3. **Natural and Direct Voice**: Use active voice and common professional vocabulary.
+4. **Avoid Em Dashes**: Do not use em dashes (`—`). Use commas, periods, colons, or parentheses.
+5. **Contextual Alignment**: Adapt voice and density to the medium (UI copy, technical documentation, or architectural records).
 
-## Pola yang Harus Dihindari
+## Patterns to Avoid
 
-Untuk daftar lengkap pola kata dan struktur artifisial yang perlu dieliminasi, lihat [references/ai-tells.md](file:///C:/Users/jefry/Downloads/devflow-rules/skills/humanize-writing/references/ai-tells.md).
+For a full list of artificial writing patterns and clichés, see [references/ai-tells.md](file:///C:/Users/jefry/Downloads/devflow-rules/skills/humanize-writing/references/ai-tells.md).
 
-Ringkasan pantangan utama:
-- Pilihan kata klise seperti "fondasi kokoh", "membuka jalan", "merevolusi", "pada era digital ini", "sebagai kesimpulan".
-- Struktur paragraf yang monoton dan formula daftar tiga poin yang dipaksakan.
-- Pujian otomatis atau kata sifat superlatif tanpa data nyata.
+Key patterns to eliminate:
+- Cliché phrases such as "solid foundation", "paving the way", "revolutionize", "in this fast-paced digital era", "in conclusion".
+- Monotonous paragraph structures and forced three-item lists.
+- Automatic praise and unsupported superlatives.
 
-## Penerapan Berdasarkan Kanal Komunikasi
+## Channel-Specific Guidance
 
-Untuk panduan mendalam per jenis dokumen, baca [references/channels.md](file:///C:/Users/jefry/Downloads/devflow-rules/skills/humanize-writing/references/channels.md).
+For in-depth channel guidelines, consult [references/channels.md](file:///C:/Users/jefry/Downloads/devflow-rules/skills/humanize-writing/references/channels.md).
 
-- **Teks UI & Label**: Gunakan kalimat tindakan singkat dan jelas ("Simpan perubahan", "Hapus akun", "Kata sandi salah").
-- **Dokumentasi Teknis**: Gunakan langkah instruksional langsung, satu tindakan per langkah, dengan hasil yang diharapkan.
-- **Catatan Rilis / Changelog**: Tulis perubahan faktual dan dampaknya secara konkret.
+- **UI Copy & Labels**: Use concise, action-driven verbs ("Save changes", "Delete account", "Invalid password").
+- **Technical Guides**: Use direct step-by-step instructions with clear expected outcomes.
+- **Release Notes / Changelogs**: State factual changes and operational impacts directly.
 
-## Contoh Penyuntingan Kalimat
+## Copy Editing Examples
 
-| Teks Kaku / Artifisial | Teks Alami dan Lugas |
+| Artificial / Stiff Copy | Natural and Direct Copy |
 |---|---|
-| Melalui fitur ini, pengguna dimungkinkan untuk melakukan konfigurasi data profil secara menyeluruh. | Ubah data profil di halaman pengaturan akun. |
-| Terjadi kendala saat melakukan proses pengolahan data transaksi Anda. Harap mencoba kembali nanti. | Transaksi gagal diproses. Silakan coba lagi. |
-| Langkah ini sangat krusial untuk memastikan sistem berjalan secara optimal dan terhindar dari potensi risiko. | Jalankan migrasi database sebelum memulai server. |
+| Through this feature, users are empowered to comprehensively manage and configure profile details. | Update your profile settings in account preferences. |
+| An unexpected issue has occurred during the transaction processing sequence. Please consider retrying later. | Transaction failed. Please try again. |
+| This critical step is paramount to ensure the system operates at peak performance without potential pitfalls. | Run database migrations before starting the server. |

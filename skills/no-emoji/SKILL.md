@@ -1,46 +1,46 @@
 ---
 name: no-emoji
-description: Panduan penegakan aturan bebas emoji dan simbol dekoratif, serta penyediaan solusi pengganti menggunakan teks biasa, badge status, dan ikon SVG inline.
+description: Standards prohibiting emojis and decorative unicode symbols, with solutions using plain text, status badges, and inline SVG icons.
 ---
 
 # No Emoji
 
-Skill ini menegakkan aturan bahwa seluruh berkas kode, antarmuka, dokumentasi, nama branch, dan pesan commit tidak boleh memuat emoji atau karakter simbol dekoratif.
+This skill enforces strict rules against the use of emojis and decorative unicode characters across codebases, user interfaces, documentation, branch names, and commit messages.
 
-## Ruang Lingkup Larangan
+## Scope of Restriction
 
-Larangan penggunaan emoji dan simbol dekoratif berlaku untuk:
-1. **Antarmuka Pengguna**: Judul, paragraf, placeholder form, badge, toast, notifikasi, dan empty state.
-2. **Atribut dan Kode**: `alt`, `title`, `aria-label`, nama fungsi, variabel, komentar kode, dan log terminal.
-3. **Dokumentasi dan Repositori**: README, PR description, commit message, dan nama berkas.
+Emojis and decorative symbols must not be used in:
+1. **User Interfaces**: Headings, body text, form placeholders, badges, toasts, alerts, and empty states.
+2. **Code and Attributes**: `alt`, `title`, `aria-label`, function names, variable identifiers, code comments, and terminal log outputs.
+3. **Documentation and Repository**: README files, PR descriptions, commit messages, and filenames.
 
-Karakter seperti centang unicode, silang unicode, bintang dekoratif, atau panah karakter juga termasuk dalam larangan jika digunakan sebagai elemen antarmuka.
+Characters such as unicode checkmarks, crosses, decorative stars, or symbol arrows are also prohibited when used as makeshift UI icons.
 
-## Solusi Pengganti yang Dianjurkan
+## Recommended Alternatives
 
-| Kebutuhan Visual | Solusi yang Diterapkan |
+| Visual Requirement | Applied Alternative |
 |---|---|
-| Ikon navigasi / kontrol | Ikon SVG inline atau pustaka ikon proyek (Lucide, Heroicons). Lihat contoh di [references/svg-icons.md](file:///C:/Users/jefry/Downloads/devflow-rules/skills/no-emoji/references/svg-icons.md). |
-| Indikator status berhasil / gagal | Badge berbasis teks ("Sukses", "Gagal", "Tertunda") dengan styling CSS latar dan teks. |
-| Daftar rincian | Poin bullet standar Markdown (`-`) atau tag HTML `<ul>` / `<li>`. |
-| Indikator progres kerja | Teks progres ("Memuat data...") atau animasi CSS spinner. |
+| Navigation / Action icons | Inline SVG (`<svg>`) or project icon libraries (Lucide, Heroicons). See examples in [references/svg-icons.md](file:///C:/Users/jefry/Downloads/devflow-rules/skills/no-emoji/references/svg-icons.md). |
+| Status indicators (success / error) | Text-based badges ("Success", "Failed", "Pending") with appropriate CSS styling. |
+| Detail lists | Standard Markdown bullet points (`-`) or HTML `<ul>` / `<li>` elements. |
+| Progress indicators | Descriptive status text ("Loading data...") or CSS animation spinners. |
 
-## Pengecualian
+## Exceptions
 
-Emoji hanya diizinkan dalam kondisi khusus berikut:
-1. Pengguna secara eksplisit meminta penambahan emoji tertentu.
-2. Data berasal dari input pengguna dinamis yang disimpan dan ditampilkan apa adanya di layar.
-3. Berkas eksternal lawas yang sudah ada sebelumnya memang menggunakan emoji dan tugas yang dikerjakan bukan bagian dari pembersihan format.
+Emojis are permitted only under these specific conditions:
+1. The user explicitly requests specific emojis.
+2. The text displays raw, dynamic user-generated content from database storage.
+3. Legacy files already employ emojis consistently and the current task is not style normalization.
 
-## Verifikasi Bebas Emoji
+## Verification
 
-Untuk memeriksa berkas di lingkungan Windows PowerShell:
+To check files in a Windows PowerShell environment:
 
 ```powershell
-Select-String -Path .\path\ke\file -Pattern '[\p{Cs}\u2190-\u27BF\u2B00-\u2BFF\uFE0F]'
+Select-String -Path .\path\to\file -Pattern '[\p{Cs}\u2190-\u27BF\u2B00-\u2BFF\uFE0F]'
 ```
 
-Atau menggunakan ripgrep (jika terpasang):
+Or using ripgrep:
 
 ```bash
 rg -n '[\x{1F300}-\x{1FAFF}\x{2190}-\x{27BF}\x{2B00}-\x{2BFF}\x{FE0F}]' .

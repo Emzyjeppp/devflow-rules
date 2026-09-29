@@ -1,44 +1,44 @@
 ---
 name: dealtech-ui
-description: Panduan pemilihan dan adaptasi komponen antarmuka konkret berdasarkan hierarki elemen, section, dan halaman DealTech UI.
+description: Guidance for selecting and adapting concrete UI components based on DealTech UI element, section, and page hierarchies.
 ---
 
 # DealTech UI
 
-Skill ini memandu AI coding assistant dalam memilih, mengadaptasi, dan menerapkan komponen antarmuka web konkret tanpa memaksakan perombakan stack teknologi proyek.
+This skill guides AI coding assistants in selecting, adapting, and integrating concrete web UI components without enforcing unwanted tech stack changes.
 
-## Prinsip Utama
+## Core Principles
 
-1. **Hierarki Komponen**: Membagi antarmuka menjadi tiga lapisan jelas:
-   - `elements/`: Komponen atomik mandiri (Button, Input, Badge, Switch).
-   - `sections/`: Komposisi blok halaman (Hero, Features, Pricing, Testimonials, Footer).
-   - `pages/`: Halaman utuh yang menyatukan section dan elemen dengan navigasi.
-2. **Adaptasi Bukan Duplikasi Mentah**: Mengambil pola tata letak, logika interaksi, dan styling, lalu menyelaraskannya dengan stack dan konvensi proyek target.
-3. **Pemisahan Perilaku**: Membedakan secara tegas antara tombol aksi (`<button>`) dan tautan navigasi (`<a>`).
+1. **Component Hierarchy**: Structure UI into three distinct layers:
+   - `elements/`: Standalone atomic components (Button, Input, Badge, Switch).
+   - `sections/`: Composed layout blocks (Hero, Features, Pricing, Testimonials, Footer).
+   - `pages/`: Full page compositions combining sections, elements, and routing.
+2. **Adaptation Over Copy-Pasting**: Extract visual structure, layout patterns, and interaction models, then translate them cleanly into the target project stack and styling conventions.
+3. **Behavioral Separation**: Maintain strict distinction between action triggers (`<button>`) and navigation links (`<a>`).
 
-## Alur Kerja Penerapan Komponen
+## Component Integration Workflow
 
-1. **Analisis Kebutuhan Antarmuka**
-   - Tentukan apakah kebutuhan berupa elemen tunggal, blok section, atau struktur satu halaman utuh.
-   - Periksa framework UI (React, Vue, Svelte, Blade, HTML statis) dan styling (Tailwind CSS, CSS Modules, vanilla CSS) yang digunakan proyek.
+1. **Analyze Interface Requirements**
+   - Determine whether the task requires a single element, a layout section, or a full page structure.
+   - Inspect the active project framework (React, Vue, Svelte, Blade, static HTML) and styling setup (Tailwind CSS, CSS Modules, vanilla CSS).
 
-2. **Pemilihan Varian Komponen**
-   - Pilih varian yang paling mendekati fungsi bisnis dan arsitektur data aplikasi.
-   - Evaluasi dependensi eksternal yang dibutuhkan (pustaka ikon, paket animasi, utility class).
+2. **Select Component Variant**
+   - Choose the variant that closely matches business goals and data requirements.
+   - Assess required external assets (icon libraries, animation packages, utility classes).
 
-3. **Penyelarasan Kode**
-   - Sesuaikan nama komponen, tipe properti (props), dan struktur direktori dengan arsitektur proyek.
-   - Ganti teks contoh, logo, gambar mockup, dan tautan contoh dengan data spesifik aplikasi.
-   - Jika proyek menggunakan Tailwind CSS dan referensi menggunakan CSS kustom, konversikan selector ke kelas utility Tailwind yang setara.
+3. **Adapt and Refactor Code**
+   - Align component names, prop types, and directory locations with the project architecture.
+   - Replace placeholder text, brand logos, mock illustrations, and dummy links with real application data.
+   - If the project uses Tailwind CSS and the reference uses custom CSS, convert selectors to standard Tailwind utility classes.
 
-4. **Verifikasi Aksesibilitas dan Responsivitas**
-   - Pastikan fokus keyboard terlihat jelas pada elemen interaktif.
-   - Pastikan section tertata dengan baik di berbagai ukuran layar (mobile, tablet, desktop).
-   - Pastikan kontras warna teks terhadap latar belakang memenuhi standar keterbacaan.
+4. **Verify Accessibility and Responsiveness**
+   - Ensure clear focus indicators on interactive elements.
+   - Verify layout stability across mobile, tablet, and desktop viewports.
+   - Ensure text contrast meets standard readability thresholds.
 
-## Checklist Integrasi
+## Integration Checklist
 
-- [ ] Variasi ukuran, warna, dan status (default, hover, active, disabled) telah tersedia.
-- [ ] Tombol ikon memiliki label deskriptif melalui `aria-label`.
-- [ ] Kontainer responsif dan tidak menimbulkan overflow horizontal yang tidak disengaja.
-- [ ] Seluruh import aset lokal maupun pustaka ikon terverifikasi valid.
+- [ ] Sizing, color schemes, and states (default, hover, active, disabled) are implemented.
+- [ ] Icon-only buttons contain descriptive `aria-label` attributes.
+- [ ] Responsive containers prevent unintended horizontal scrollbars.
+- [ ] All local asset imports and icon packages are validated and operational.

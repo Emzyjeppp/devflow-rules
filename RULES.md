@@ -1,153 +1,153 @@
-# Aturan Pengembangan Web
+# Web Development Rules
 
-Panduan untuk membangun antarmuka yang konsisten, menyelesaikan fitur secara utuh, dan menjaga kode tetap sederhana.
+A comprehensive guide for building consistent user interfaces, completing features end-to-end, and maintaining lean, readable codebases.
 
-Disusun berdasarkan DealTech UI, Vibes-Plug, Ponytail, pedoman commit nyancodeid, Humanize Pro, serta aturan tanpa emoji. Setiap referensi diadaptasi menjadi aturan kerja yang terintegrasi dan dapat digunakan bersama.
+Adapted and unified from DealTech UI, Vibes-Plug, Ponytail, nyancodeid commit conventions, Humanize Pro, and zero-emoji policies.
 
-## Cara Menggunakan
+## How to Use
 
-Lampirkan file ini atau gabungkan bagian yang relevan ke instruksi proyek Anda (misalnya `.cursorrules`, `CLAUDE.md`, `.windsurfrules`, atau system prompt AI). Pertahankan batasan serta instruksi spesifik proyek yang sedang berjalan. Dokumen ini berfungsi sebagai panduan kerja dan acuan standar.
+Attach this file or include relevant sections in your project instructions (such as `.cursorrules`, `CLAUDE.md`, `.windsurfrules`, or your AI assistant system prompt). Maintain any project-specific constraints already in place. This document acts as an operational standard and quality benchmark.
 
-Aturan ini berlaku untuk HTML, CSS, JavaScript, TypeScript, JSX/TSX, Vue, Svelte, template server, komponen antarmuka, dokumentasi, serta perubahan backend yang mendukung fitur web.
+Applies to HTML, CSS, JavaScript, TypeScript, JSX/TSX, Vue, Svelte, server templates, UI components, documentation, and backend changes supporting web features.
 
-## Dasar Penyusunan
+## Foundations
 
-| Referensi | Prinsip Utama |
+| Reference | Core Principle |
 |---|---|
-| DealTech UI | Memilih acuan antarmuka konkret melalui hierarki elemen, section, dan halaman; menyesuaikan komponen dengan kebutuhan produk. |
-| Vibes-Plug | Menghubungkan perencanaan, implementasi, integrasi, verifikasi, dan dokumentasi secara bertahap. |
-| Ponytail | Memahami masalah sebelum mengubah kode, memanfaatkan solusi bawaan yang sudah ada, dan menghindari pekerjaan yang belum diperlukan. |
-| Pedoman commit nyancodeid | Menulis pesan commit dengan tipe, cakupan, subjek, serta penjelasan perubahan yang konsisten dan terstruktur. |
-| Humanize Pro | Menyesuaikan bahasa dengan pembaca, menjaga akurasi fakta, dan menghindari pola kalimat buatan yang kaku. |
-| Aturan tanpa emoji | Menggunakan teks biasa, badge status, dan ikon SVG inline tanpa simbol dekoratif atau emoji. |
+| DealTech UI | Concrete UI reference hierarchy (elements, sections, pages); adapting components to product requirements without forcing stack shifts. |
+| Vibes-Plug | Phased lifecycle connecting planning, implementation, integration, verification, and documentation. |
+| Ponytail | Problem comprehension before coding, reusing existing solutions, prioritizing standard libraries, and avoiding premature work. |
+| nyancodeid Commit Guidelines | Structured commit messages with consistent types, optional scopes, concise subjects, and clear descriptions. |
+| Humanize Pro | Audience-centered language, strict factual accuracy, eliminating artificial boilerplate, and avoiding em dashes. |
+| Zero-Emoji Rules | Plain text, text-based status badges, and inline SVG icons instead of decorative symbols or emojis. |
 
-Kebijakan terpadu dokumen ini: gunakan struktur kerja secukupnya, penuhi seluruh kebutuhan yang diminta, dan pilih implementasi paling sederhana yang tetap benar.
+Unified policy: Apply appropriate structure for the task scale, fulfill all requested requirements, and select the simplest working implementation.
 
-## 1. Pahami Proyek Sebelum Mengubahnya
+## 1. Understand the Project Before Modifying It
 
-- Baca seluruh instruksi sampai tuntas. Tentukan hasil akhir yang harus terlihat atau dapat dijalankan pengguna.
-- Periksa file terkait, alur data, komponen yang sudah ada, dependensi, konfigurasi, dan perintah proyek.
-- Pertahankan stack serta konvensi yang masih memenuhi kebutuhan. Jangan mengganti framework, package manager, atau sistem styling hanya karena referensi memakai teknologi berbeda.
-- Untuk penanganan bug, telusuri pemanggil fungsi dan alur yang terdampak. Perbaiki akar penyebab utama jika beberapa jalur mengalami kendala yang sama.
-- Gunakan asumsi yang wajar untuk keputusan kecil. Tanyakan klarifikasi jika informasi yang hilang berpotensi mengubah perilaku inti atau ruang lingkup utama.
-- Jangan berasumsi bahwa paket, pustaka, API, atau komponen dalam referensi pasti tersedia. Selalu sesuaikan dengan kondisi proyek dan dokumentasi versi yang aktif.
+- Read the entire prompt and requirements thoroughly. Identify the concrete outcome that the user should experience.
+- Inspect related files, data flows, existing components, installed dependencies, configuration files, and project scripts.
+- Preserve the existing stack and conventions whenever they meet project needs. Do not swap frameworks, package managers, or styling tools simply because an external reference uses different technologies.
+- For bug fixes, trace callers and affected data paths. Address the underlying root cause if multiple paths exhibit the same issue.
+- Make reasonable decisions for minor implementation details. Request clarification only when missing information fundamentally alters core requirements or project scope.
+- Do not assume external packages, APIs, skills, or components exist. Verify compatibility against actual project files and installed versions.
 
-## 2. Pilih Solusi Paling Sederhana yang Memenuhi Kebutuhan
+## 2. Choose the Simplest Solution That Meets Requirements
 
-Ikuti urutan pengambilan keputusan berikut sebelum menulis kode baru:
+Follow this decision ladder before writing new code or introducing dependencies:
 
-1. Pastikan pekerjaan tersebut memang dibutuhkan oleh permintaan saat ini.
-2. Cari fungsi, komponen, tipe, atau pola yang sudah tersedia di dalam proyek.
-3. Periksa apakah pustaka standar bahasa sudah menyelesaikannya.
-4. Pertimbangkan fitur bawaan platform, browser, CSS modern, atau basis data.
-5. Gunakan dependensi yang sudah terpasang jika relevan.
-6. Tulis implementasi kecil dan mudah dibaca untuk kebutuhan yang belum tercakup.
-7. Tambahkan dependensi atau abstraksi baru hanya jika manfaatnya jelas dan sepadan.
+1. Confirm that the work is genuinely required by the current request.
+2. Search for functions, components, types, or patterns already available in the project.
+3. Check whether runtime standard libraries (e.g. `fetch`, `URL`, `crypto`, `Intl`) solve the problem.
+4. Leverage native platform, browser, CSS, or database capabilities.
+5. Utilize already installed dependencies where appropriate.
+6. Write a small, readable implementation for uncovered needs.
+7. Introduce new dependencies or abstractions only when the benefits are clear, measurable, and justified.
 
-Kode ringkas wajib mempertahankan validasi, penanganan kesalahan, keamanan, aksesibilitas, dan perilaku yang diminta. Jangan memadatkan kode secara berlebihan jika membuat kode sulit dirawat.
+Concise code must retain input validation, error handling, security, accessibility, and the requested behavior. Avoid dense one-liners that degrade readability and maintainability.
 
-| Kebutuhan | Titik Awal | Pertimbangkan Solusi Tambahan Jika |
+| Requirement | Starting Point | Consider Additional Solutions If |
 |---|---|---|
-| Input tanggal sederhana | Input tipe date bawaan browser | Memerlukan rentang tanggal interaktif atau kalender khusus. |
-| FAQ atau akordeon | Elemen native details dan summary | Interaksi produk melampaui kemampuan elemen tersebut. |
-| Format angka dan mata uang | Intl.NumberFormat | Terdapat aturan bisnis kustom yang belum tercakup. |
-| Tata letak responsif | CSS Grid, Flexbox, dan media queries | Terdapat kalkulasi posisi dinamis yang wajib menggunakan JavaScript. |
-| Tombol berbagai variasi | Komponen tombol yang sudah ada | Perilaku atau kontrak interaksinya berbeda secara nyata. |
+| Simple date picker | Native browser date input (`<input type="date">`) | Complex range selection or specialized calendar UX is required. |
+| Collapsible FAQ | Native `<details>` and `<summary>` elements | Product interactions exceed standard element behavior. |
+| Currency and number formatting | `Intl.NumberFormat` | Specific custom business formatting rules are missing. |
+| Responsive layout | CSS Grid, Flexbox, and media queries | Dynamic layout computations strictly require JavaScript. |
+| Multi-variant buttons | Existing button component | Interaction contracts or accessibility states diverge significantly. |
 
-## 3. Gunakan Acuan Komponen UI Konkret
+## 3. Use Concrete UI Components as References
 
-Bagi komponen antarmuka ke dalam tiga tingkatan hierarki:
+Structure UI components across three distinct layers:
 
-- Elements: Komponen atomik mandiri (misalnya Button, Input, Badge, Toggle).
-- Sections: Blok bagian halaman yang menggabungkan beberapa elemen (misalnya Hero, Features, Pricing, Testimonials).
-- Pages: Komposisi lengkap yang membentuk satu halaman utuh.
+- **Elements**: Standalone atomic components (Button, Input, Badge, Switch).
+- **Sections**: Page blocks composing multiple elements (Hero, Features, Pricing, Testimonials, Footer).
+- **Pages**: Complete compositions combining sections, elements, and routing.
 
-Langkah saat mengadopsi komponen:
+Steps when adopting reference components:
 
-1. Pilih varian yang cocok dengan fungsi dan konteks halaman.
-2. Baca kode, CSS, dan catatan perilaku komponen yang tersedia.
-3. Periksa kebutuhan import, aset, selector, font, ikon, dan interaksinya.
-4. Ambil bagian yang dibutuhkan, lalu sesuaikan dengan struktur proyek yang aktif.
-5. Ganti konten contoh, tautan, identitas merek, dan jalur aset dengan data nyata.
-6. Uji hasil integrasi pada seluruh tampilan halaman terkait.
+1. Choose a variant matching the functional and visual context.
+2. Read the source code, styling, and interactive behavior.
+3. Check required imports, assets, selectors, typography, icons, and dependencies.
+4. Extract needed parts and adapt them to the project directory structure.
+5. Replace dummy copy, links, branding, and asset paths with project data.
+6. Verify integration across existing pages and responsive viewports.
 
-Jika proyek menggunakan stack yang berbeda dari contoh referensi, adaptasikan susunan visual dan perilakunya ke framework proyek saat ini tanpa memaksakan migrasi stack.
+When working with a different tech stack than the reference, adapt the visual structure and behavior to your current stack rather than migrating the project.
 
-## 4. Jaga Arah Visual dan Konsistensi Desain
+## 4. Maintain Visual Hierarchy and Component Consistency
 
-- Tentukan hierarki konten, palet warna, tipografi, jarak (spacing), dan bentuk komponen sebelum memperbanyak halaman.
-- Gunakan token desain yang sudah ada (variabel CSS atau kelas utility Tailwind). Tambahkan token baru hanya jika ada kebutuhan berulang yang nyata.
-- Pertahankan identitas merek, tema warna, dan panduan desain yang telah ditentukan.
-- Selaraskan gaya antarbagian halaman: lebar kontainer utama, ukuran judul, tombol aksi, dan jarak vertikal antar-section.
-- Pastikan tampilan tetap rapi saat teks panjang, data kosong, atau layar perangkat menyempit.
-- Tambahkan animasi halus untuk memperjelas transisi atau umpan balik interaksi. Sediakan dukungan pengurangan gerak (prefers-reduced-motion).
-- Rancang props dan variasi komponen berdasarkan kebutuhan nyata. Hindari konfigurasi berlebih untuk skenario yang belum ada.
+- Establish content hierarchy, primary color palettes, typography scales, spacing tokens, and component radius before expanding page count.
+- Use existing design tokens (CSS variables or utility classes). Introduce new tokens only when recurring needs arise.
+- Preserve brand identity, color schemes, and user-provided design guidelines.
+- Align styling across sections: main container widths, heading scales, action buttons, and vertical spacing.
+- Ensure layouts remain resilient when text expands, datasets are empty, or screen widths shrink.
+- Use subtle animations to clarify transitions or interaction feedback. Respect user motion preferences (`prefers-reduced-motion`).
+- Design props and component variants around actual usage. Avoid exhaustive speculative configurations.
 
-## 5. Selesaikan Perilaku dan Aksesibilitas
+## 5. Ensure Complete Behavior and Accessibility
 
-- Gunakan elemen HTML semantik: tombol (`<button>`) untuk aksi, tautan (`<a>`) untuk navigasi antarhalaman, dan label form yang terhubung dengan elemen input.
-- Sediakan indikator fokus yang jelas dan pastikan seluruh interaksi dapat diakses melalui keyboard.
-- Berikan atribut aksesibel yang memadai pada tombol berbasis ikon. Bedakan gambar informatif dan dekoratif dengan atribut `alt` yang tepat.
-- Informasikan status operasi melalui teks deskriptif, bukan hanya mengandalkan perubahan warna.
-- Sediakan state antarmuka yang lengkap: loading, data kosong, error/gagal, dan berhasil.
-- Tampilkan pesan kesalahan validasi pada posisi yang relevan serta pertahankan input pengguna ketika pengiriman form gagal.
-- Pada komponen dialog modal, kelola fokus keyboard saat modal terbuka, saat ditutup, dan kembalikan fokus ke pemicu asalnya.
-- Pastikan data contoh (mock) terpisah jelas dari data produksi. Jangan menampilkan proses penyimpanan sebagai sukses sebelum respons berhasil diterima.
+- Use semantic HTML elements: `<button>` for actions, `<a>` for navigation, and form labels linked to input fields.
+- Provide clear visible focus indicators and ensure all interactions are keyboard accessible.
+- Provide accessible names on icon buttons via `aria-label`. Distinguish informative images from decorative ones using accurate `alt` attributes.
+- Communicate status changes through descriptive text in addition to color cues.
+- Implement comprehensive UI states: loading, empty, error, and success.
+- Display validation errors in relevant positions and preserve user input when form submissions fail.
+- For modal dialogs, trap focus appropriately, support Escape key closing, and restore focus to the trigger element on close.
+- Clearly separate mock data from live production endpoints. Never present storage operations as successful before receiving actual confirmation.
 
-## 6. Sesuaikan Alur Kerja Berdasarkan Skala Tugas
+## 6. Adapt Workflow to Task Scale
 
-| Skala Tugas | Alur Kerja | Dokumentasi Minimum |
+| Task Scale | Workflow | Minimum Documentation |
 |---|---|---|
-| Perbaikan kecil / styling | Baca konteks, ubah file terkait, verifikasi hasil | Catatan perubahan ringkas pada commit |
-| Komponen atau fitur tunggal | Tetapkan spesifikasi, implementasi, integrasi, uji coba | Kontrak props atau skema data bila ada |
-| Fitur lintas lapisan (Fullstack) | Selaraskan skema data, endpoint API, state UI, dan error handling | Ringkasan kontrak antarmuka dan cara verifikasi |
-| Aplikasi baru dari awal | Tetapkan PRD, fondasi, model data, API, UI, pengujian, penguatan, rilis | Dokumentasi alur kerja dan petunjuk operasional |
+| Local copy / styling fix | Read context, modify files, verify results | Concise commit description |
+| Single feature or component | Define behavior, implement, integrate, verify | Props or data contract summary |
+| Fullstack feature | Align data schema, API endpoints, UI state, and errors | Interface contracts and verification steps |
+| New multi-feature app | PRD, foundation, data architecture, API, UI, testing, hardening, release | Setup guide and operational instructions |
 
-### Alur Delapan Fase untuk Proyek Baru
+### Eight-Phase Workflow for New Applications
 
-1. Fase Kebutuhan: Rumuskan PRD singkat berisi tujuan pengguna, batasan, fitur inti, dan stack teknologi.
-2. Fase Fondasi: Siapkan struktur folder, konfigurasi linter, format berkas, dan skrip build.
-3. Fase Arsitektur Data: Susun skema database, relasi entitas, migrasi, dan aturan keamanan data.
-4. Fase Layanan dan API: Bangun endpoint, validasi skema input, otentikasi, dan otorisasi.
-5. Fase Antarmuka Pengguna: Terapkan komponen visual, routing, manajemen state, dan integrasi API.
-6. Fase Pengujian: Jalankan pengujian unit, integrasi, atau pengujian alur kritis untuk memastikan stabilitas.
-7. Fase Penguatan: Audit keamanan, optimasi performa, kesiapan SEO, dan ketahanan terhadap error.
-8. Fase Rilis dan Penyerahan: Finalisasi build, verifikasi petunjuk deployment, dan dokumentasikan cara menjalankan.
+1. **Requirements & PRD**: Define target users, core features, technical constraints, and stack selection.
+2. **Project Foundation**: Configure folder structure, linters, formatters, and build scripts.
+3. **Data Architecture**: Design database schemas, entity relations, migrations, and security rules.
+4. **Services & APIs**: Build backend services, endpoint contracts, input validation, and authentication/authorization.
+5. **Frontend & UI**: Implement visual components, navigation routing, state management, and API integration.
+6. **Testing**: Validate critical user flows, edge cases, and automated test suites.
+7. **Hardening**: Audit security vulnerabilities, optimize asset loading, verify SEO readiness, and ensure graceful error handling.
+8. **Release & Handover**: Verify production builds, document deployment steps, and finalize documentation.
 
-## 7. Kualitas Kode dan Kebersihan
+## 7. Code Quality and Cleanliness
 
-- Selesaikan jalur utama fitur secara tuntas; jangan meninggalkan placeholder pada bagian yang seharusnya berfungsi.
-- Hindari duplikasi logika, wrapper tanpa manfaat tambahan, atau abstraksi dini untuk satu kasus penggunaan sederhana.
-- Batasi modifikasi hanya pada area yang relevan dengan tugas. Hapus kode yang sudah tidak terpakai setelah memverifikasi dependensinya.
-- Tulis komentar hanya untuk menjelaskan keputusan teknis yang tidak jelas atau batasan khusus, bukan mengulang sintaks kode.
-- Terapkan validasi tipe dan validasi runtime pada data yang berasal dari input pengguna, API pihak ketiga, atau file eksternal.
-- Pertahankan penanganan kesalahan yang aman. Jangan menyembunyikan pesan kesalahan teknis jika hal itu menghambat diagnosis masalah.
+- Complete primary feature paths; do not leave functional placeholders in production code.
+- Avoid duplicate logic, zero-value wrappers, and premature abstractions for single-use functions.
+- Confine changes to necessary scopes. Remove dead code and unused imports after verifying references.
+- Write comments to clarify non-obvious technical decisions or constraints, not to repeat readable syntax.
+- Enforce type safety and runtime validation on data coming from user inputs, external APIs, or file systems.
+- Maintain resilient error handling that prevents data loss. Never suppress technical errors in a way that obscures root causes.
 
-## 8. Aturan Tanpa Emoji
+## 8. Zero-Emoji Discipline
 
-Jangan menggunakan emoji atau simbol dekoratif pengganti emoji pada:
+Do not include emojis or decorative unicode symbols in:
 
-- Judul, paragraf, label form, placeholder, pesan kesalahan, toast, tooltip, dan tampilan kosong.
-- Atribut HTML seperti `alt`, `title`, `aria-label`, `data-*`, dan tag metadata.
-- Nama variabel, pengenal kode, string literal, komentar kode, dan log aplikasi.
-- File README, CHANGELOG, commit message, pull request, dan dokumentasi teknis.
-- Penamaan branch, folder, maupun berkas.
+- Headings, body copy, form labels, placeholders, error alerts, toasts, tooltips, and empty states.
+- Attributes such as `alt`, `title`, `aria-label`, `data-*`, and metadata tags.
+- Variable names, identifiers, string literals, code comments, and terminal logs.
+- README files, CHANGELOG files, commit messages, PR descriptions, and documentation.
+- Branch, folder, and file names.
 
-Gunakan alternatif berikut:
+Use these alternatives:
 
-| Kebutuhan Visual | Solusi Pengganti |
+| Visual Need | Recommended Alternative |
 |---|---|
-| Ikon navigasi / aksi | SVG inline (`<svg>`) atau pustaka ikon proyek (misalnya Lucide). |
-| Indikator status | Badge berbasis teks (contoh: "Aktif", "Gagal", "Menunggu") disertai styling warna. |
-| Daftar poin | Bullet Markdown standar (`-` atau `*`) atau tag HTML `<ul>` dan `<li>`. |
-| Penekanan informasi | Hierarki tipografi, variasi ketebalan teks (bold), dan kontras warna. |
-| Indikator proses | Teks status ("Memuat data...") atau animasi CSS spinner. |
+| Navigation / Action icons | Inline SVG (`<svg>`) or project icon libraries (e.g. Lucide). |
+| Status indicators | Text-based badges ("Active", "Failed", "Pending") with CSS styling. |
+| List items | Standard Markdown bullets (`-`) or HTML `<ul>` / `<li>` tags. |
+| Information emphasis | Typography hierarchy, bold weight, and color contrast. |
+| Progress indicators | Status text ("Loading data...") or CSS animation spinners. |
 
-Pengecualian hanya berlaku jika pengguna meminta emoji secara eksplisit, teks menampilkan data mentah dari masukan pengguna, atau file lama memang menggunakan emoji secara konsisten dan tugas tidak mencakup restrukturisasi gaya.
+Exceptions apply only when explicitly requested by the user, when displaying raw user-generated data, or when editing legacy files where emojis are already established and out of scope for cleanup.
 
-## 9. Pedoman Pesan Commit
+## 9. Commit Message Guidelines
 
-Format pesan commit mengikuti struktur berikut:
+Commit messages must follow this structure:
 
 ```text
 <type>(<scope>): <subject>
@@ -157,65 +157,65 @@ Format pesan commit mengikuti struktur berikut:
 <footer>
 ```
 
-Tipe commit standar:
+Standard types:
 
-- `feat`: Penambahan fitur baru.
-- `fix`: Perbaikan bug atau kesalahan program.
-- `refactor`: Perubahan struktur kode tanpa mengubah fungsi atau memperbaiki bug.
-- `perf`: Peningkatan performa kode.
-- `style`: Perubahan pemformatan spasi, titik koma, atau tata letak kode tanpa mengubah arti.
-- `test`: Penambahan atau penyesuaian berkas pengujian.
-- `docs`: Penambahan atau pembaruan dokumentasi.
-- `build`: Perubahan pada sistem build atau dependensi eksternal.
-- `ci`: Perubahan pada berkas konfigurasi atau skrip automasi CI/CD.
+- `feat`: New user-facing feature.
+- `fix`: Bug fix.
+- `refactor`: Code changes that neither fix a bug nor add a feature.
+- `perf`: Performance improvements.
+- `style`: Formatting, whitespace, or punctuation changes that do not affect code logic.
+- `test`: Adding or correcting tests.
+- `docs`: Documentation updates.
+- `build`: Changes affecting build systems or external dependencies.
+- `ci`: Changes to CI/CD configuration files and scripts.
 
-Aturan penulisan:
+Formatting rules:
 
-- Subjek ditulis singkat dalam kalimat perintah, diawali huruf kecil, tanpa titik penutup, maksimal 100 karakter.
-- Scope bersifat opsional dan merujuk pada modul proyek (misalnya `auth`, `ui`, `api`, `config`).
-- Body digunakan jika perlu menjelaskan latar belakang atau rincian keputusan teknis.
-- Gunakan `BREAKING CHANGE:` pada footer untuk perubahan yang tidak kompatibel dengan versi sebelumnya.
+- The subject line must be in imperative mood, lower case, without a trailing period, and under 100 characters.
+- Scope is optional and indicates the project module (e.g., `auth`, `ui`, `api`, `config`).
+- The body provides context and explains the motivation for the change.
+- Use `BREAKING CHANGE:` in the footer for backward-incompatible modifications.
 
-Contoh:
+Example:
 
 ```text
-feat(ui): tambahkan komponen dropdown navigasi utama
-fix(auth): tangani kegagalan verifikasi token kedaluwarsa
-docs(readme): perbarui panduan instalasi dan konfigurasi env
+feat(ui): add responsive dropdown navigation menu
+fix(auth): handle expired token verification gracefully
+docs(readme): update installation steps and environment variables
 ```
 
-## 10. Penulisan Bahasa Natural
+## 10. Natural Technical Writing
 
-Terapkan gaya penulisan yang wajar, komunikatif, dan berbasis fakta untuk teks antarmuka, dokumentasi, dan penjelasan teknis:
+Apply clear, concise, and factual writing standards to all UI copy, documentation, and technical explanations:
 
-- Sampaikan pesan utama secara langsung tanpa basa-basi pembuka yang berulang.
-- Gunakan struktur kalimat aktif dan kosakata yang lazim digunakan.
-- Jelaskan istilah teknis secara kontekstual jika ditujukan untuk pengguna umum.
-- Hindari tanda hubung em dash (`—`). Gunakan tanda titik, koma, titik dua, atau kurung untuk memisahkan keterangan.
-- Hindari klaim berlebihan, kata sifat superlatif tanpa data, atau pujian otomatis.
-- Jangan mengarang data atau angka; pertahankan fakta apa adanya.
-- Pastikan pesan antarmuka memberikan arahan tindakan yang jelas (contoh: "Masukkan alamat email" alih-alih "Silakan melakukan pengisian kolom email").
+- Lead with the primary information directly; remove introductory pleasantries and formulaic conclusions.
+- Use active voice and common, accessible vocabulary.
+- Explain technical terminology in context when addressing general users.
+- Avoid em dashes (`—`). Use commas, periods, colons, or parentheses instead.
+- Eliminate hyperbolic claims, unearned superlatives, and artificial praise.
+- Preserve factual accuracy and do not fabricate metrics, names, or quotes.
+- Ensure UI messages guide users toward clear actions (e.g., "Enter your email address" instead of "Please proceed with entering your email in this field").
 
-## 11. Pemeriksaan Sebelum Penyerahan
+## 11. Pre-Handover Verification
 
-Gunakan daftar periksa berikut sebelum menyelesaikan pekerjaan:
+Run through this checklist before submitting work:
 
-- [ ] Seluruh instruksi dan kebutuhan fitur terpenuhi dengan benar.
-- [ ] Komponen, import, file aset, dan dependensi terverifikasi ketersediaannya.
-- [ ] Tampilan antarmuka telah disesuaikan untuk berbagai ukuran layar.
-- [ ] State loading, data kosong, dan kondisi error tertangani dengan baik.
-- [ ] Aksesibilitas keyboard dan label elemen interaktif berfungsi.
-- [ ] Kode tidak meninggalkan fungsi mati atau placeholder yang belum selesai.
-- [ ] Tidak ada emoji atau simbol dekoratif yang melanggar aturan tanpa emoji.
-- [ ] Pesan commit mengikuti format tipe, scope, dan batasan panjang karakter.
-- [ ] Teks dokumentasi dan antarmuka telah diperiksa dengan bahasa yang natural.
+- [ ] All requirements and feature behaviors are satisfied.
+- [ ] Components, imports, asset paths, and dependencies are verified.
+- [ ] Layouts are verified across mobile and desktop viewport sizes.
+- [ ] Loading, empty, and error states are implemented.
+- [ ] Keyboard navigation and accessibility labels function as intended.
+- [ ] Code contains no dead logic or incomplete feature placeholders.
+- [ ] Zero-emoji rules are respected across all code, attributes, and text.
+- [ ] Commit messages conform to type, scope, and character length standards.
+- [ ] Documentation and UI copy are written in natural, concise language.
 
-Perintah verifikasi larangan emoji pada PowerShell:
+PowerShell emoji verification command:
 
 ```powershell
-Select-String -Path .\path\ke\file -Pattern '[\p{Cs}\u2190-\u27BF\u2B00-\u2BFF\uFE0F]'
+Select-String -Path .\path\to\file -Pattern '[\p{Cs}\u2190-\u27BF\u2B00-\u2BFF\uFE0F]'
 ```
 
-## 12. Penyampaian Hasil
+## 12. Concrete Delivery
 
-Sampaikan hasil pekerjaan dengan menunjukkan file yang dibuat atau diubah, ringkasan perbaikan, cara penggunaan, dan status verifikasi aktual. Jangan mengklaim pengujian atau rilis yang belum benar-benar dijalankan.
+Present completed files with a concise summary of changes, usage instructions, and actual verification results. Never claim testing, skill execution, or deployment actions that have not been performed.

@@ -1,29 +1,29 @@
-# Panduan Gaya Bahasa Berdasarkan Kanal
+# Channel-Specific Writing Guidance
 
-Gaya penulisan harus disesuaikan dengan media dan tujuan pembaca agar informasi tersampaikan secara efektif.
+Tone, length, and detail should be tailored to the medium and reader intent to communicate technical information effectively.
 
-## 1. Antarmuka Pengguna (UI)
+## 1. User Interfaces (UI)
 
-- **Label Tombol**: Gunakan kata kerja imperatif spesifik (contoh: "Simpan", "Kirim", "Perbarui", "Hapus").
-- **Pesan Validasi Form**: Tunjukkan letak kesalahan dan tindakan perbaikan langsung (contoh: "Gunakan minimal 8 karakter").
-- **Pesan Status / Toast**: Jelaskan hasil secara singkat (contoh: "Data pengguna berhasil diperbarui").
-- **Kondisi Kosong (Empty State)**: Jelaskan mengapa data belum ada dan sediakan tombol tindakan pertama (contoh: "Belum ada transaksi. Buat transaksi baru untuk memulai.").
+- **Button Labels**: Use specific imperative verbs (e.g., "Save", "Submit", "Update", "Delete").
+- **Form Validation**: State the specific issue and immediate remedy directly (e.g., "Use at least 8 characters").
+- **Status / Toast Notifications**: Summarize the outcome succinctly (e.g., "Profile settings updated").
+- **Empty States**: Explain why data is missing and provide an immediate next action (e.g., "No transactions found. Create a new transaction to get started.").
 
-## 2. Dokumentasi Teknis dan Petunjuk Instalasi
+## 2. Technical Documentation and Guides
 
-- Gunakan format langkah bertahap berurutan.
-- Satu langkah memuat satu perintah atau tindakan yang jelas.
-- Sertakan contoh blok kode yang dapat disalin dan dijalankan langsung.
-- Cantumkan hasil yang diharapkan setelah perintah dijalankan.
+- Structure instructions in chronological steps.
+- Keep each step focused on a single actionable command or task.
+- Provide self-contained code snippets that can be copied and executed directly.
+- Document expected terminal outputs or visual feedback.
 
-## 3. Catatan Keputusan Arsitektur dan Laporan
+## 3. Architecture Decision Records (ADR) and Reports
 
-- Awali dengan ringkasan konteks masalah.
-- Paparkan opsi yang dipertimbangkan beserta kelebihan dan kekurangannya secara objektif.
-- Sampaikan keputusan yang diambil dan dasar pertimbangannya.
-- Jelaskan dampak teknis serta langkah mitigasi jika terdapat kompromi desain.
+- Begin with a concise context summary.
+- Objectively present considered options along with practical trade-offs.
+- State the chosen direction and the core rationale behind it.
+- Outline known constraints and future mitigation paths.
 
-## 4. Pesan Commit dan Komentar Kode
+## 4. Commit Messages and Code Comments
 
-- Fokus pada alasan *mengapa* perubahan dilakukan, bukan sekadar mengulang *apa* yang tertulis di kode.
-- Pertahankan struktur penulisan baku sesuai standar tipe commit.
+- Explain *why* a change was made rather than reiterating *what* the syntax does.
+- Maintain strict semantic commit type conventions.
