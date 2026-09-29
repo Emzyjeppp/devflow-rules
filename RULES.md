@@ -2,7 +2,7 @@
 
 A comprehensive guide for building consistent user interfaces, completing features end-to-end, and maintaining lean, readable codebases.
 
-Adapted and unified from DealTech UI, Vibes-Plug, Ponytail, nyancodeid commit conventions, Humanize Pro, and zero-emoji policies.
+Adapted and unified from DealTech UI, Vibes-Plug, Ponytail, Impeccable, nyancodeid commit conventions, Humanize Pro, and zero-emoji policies.
 
 ## How to Use
 
@@ -15,6 +15,7 @@ Applies to HTML, CSS, JavaScript, TypeScript, JSX/TSX, Vue, Svelte, server templ
 | Reference | Core Principle |
 |---|---|
 | DealTech UI | Concrete UI reference hierarchy (elements, sections, pages); adapting components to product requirements without forcing stack shifts. |
+| Impeccable | Eliminating AI frontend anti-patterns (generic fonts, cliché purple gradients, card-in-card nesting, low-contrast text). |
 | Vibes-Plug | Phased lifecycle connecting planning, implementation, integration, verification, and documentation. |
 | Ponytail | Problem comprehension before coding, reusing existing solutions, prioritizing standard libraries, and avoiding premature work. |
 | nyancodeid Commit Guidelines | Structured commit messages with consistent types, optional scopes, concise subjects, and clear descriptions. |

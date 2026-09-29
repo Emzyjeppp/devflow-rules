@@ -96,6 +96,10 @@ devflow-rules/
     |   `-- references/
     |       |-- ai-tells.md
     |       `-- channels.md
+    |-- impeccable-design/
+    |   |-- SKILL.md
+    |   `-- references/
+    |       `-- anti-patterns.md
     |-- no-emoji/
     |   |-- SKILL.md
     |   `-- references/
@@ -111,6 +115,7 @@ devflow-rules/
 | Skill | Description | Entry Point |
 |---|---|---|
 | `dealtech-ui` | Guidance on selecting and adapting concrete UI components based on element, section, and page hierarchies. | [skills/dealtech-ui/SKILL.md](skills/dealtech-ui/SKILL.md) |
+| `impeccable-design` | Frontend design guidance eliminating AI UI clichés, overused fonts, and nested card layouts. | [skills/impeccable-design/SKILL.md](skills/impeccable-design/SKILL.md) |
 | `devflow-orchestrator` | 8-phase development workflow orchestration from initial requirements (PRD) to release. | [skills/devflow-orchestrator/SKILL.md](skills/devflow-orchestrator/SKILL.md) |
 | `ponytail-lean` | Anti-overengineering rules, YAGNI enforcement, and standard library prioritization. | [skills/ponytail-lean/SKILL.md](skills/ponytail-lean/SKILL.md) |
 | `commit-nyancodeid` | Standardized Git commit message conventions adapted from nyancodeid guidelines. | [skills/commit-nyancodeid/SKILL.md](skills/commit-nyancodeid/SKILL.md) |
@@ -128,7 +133,7 @@ You can also list and install individual skills into your repository:
 npx github:Emzyjeppp/devflow-rules list
 
 # Add a specific skill to ./skills/
-npx github:Emzyjeppp/devflow-rules add dealtech-ui
+npx github:Emzyjeppp/devflow-rules add impeccable-design
 ```
 
 ---
@@ -157,6 +162,7 @@ Review the modal confirmation messages in this file according to skills/humanize
 The rules and skills in this repository are adapted from the following open references:
 
 - **DealTech UI**: Public UI component collection ([Deal-Tech/dealtech-ui-for-public-component](https://github.com/Deal-Tech/dealtech-ui-for-public-component)).
+- **Impeccable**: Design guidance for AI coding agents by Paul Bakaus ([pbakaus/impeccable](https://github.com/pbakaus/impeccable)).
 - **Vibes-Plug**: Multi-agent orchestration workflows by Roedy Rustam ([roedyrustam/vibes-plug](https://github.com/roedyrustam/vibes-plug)).
 - **Ponytail**: Minimalist software engineering and anti-overengineering rules by Dietrich Gebert ([DietrichGebert/ponytail](https://github.com/DietrichGebert/ponytail)).
 - **nyancodeid Commit Guidelines**: Conventional commit message structure by nyancodeid ([Gist nyancodeid](https://gist.github.com/nyancodeid/63f19941c81252bb0cca9c14497cf9f7)).

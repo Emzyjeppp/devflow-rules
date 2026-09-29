@@ -177,7 +177,25 @@
         </div>
       </div>
 
-      <!-- Card 2: devflow-orchestrator -->
+      <!-- Card 2: impeccable-design -->
+      <div class="bg-slate-900/60 border border-slate-800 hover:border-slate-700 rounded-xl p-6 transition flex flex-col justify-between">
+        <div>
+          <div class="flex items-center justify-between mb-4">
+            <span class="text-xs font-mono font-semibold text-emerald-400 bg-emerald-950/60 px-2.5 py-1 rounded border border-emerald-800/40">impeccable-design</span>
+            <span class="text-xs text-slate-500 font-mono">Frontend Design</span>
+          </div>
+          <h3 class="text-base font-bold text-white mb-2">Impeccable Design</h3>
+          <p class="text-xs text-slate-400 leading-relaxed mb-4">
+            Eliminates AI frontend anti-patterns: overused Inter fonts, neon violet gradients, and card-in-card nesting.
+          </p>
+        </div>
+        <div class="border-t border-slate-800/80 pt-4 flex items-center justify-between text-xs text-slate-400">
+          <span>Anti-Patterns &amp; Polish</span>
+          <button onclick="showSkillModal('impeccable-design')" class="text-emerald-400 hover:text-emerald-300 font-medium">Details &rarr;</button>
+        </div>
+      </div>
+
+      <!-- Card 3: devflow-orchestrator -->
       <div class="bg-slate-900/60 border border-slate-800 hover:border-slate-700 rounded-xl p-6 transition flex flex-col justify-between">
         <div>
           <div class="flex items-center justify-between mb-4">
@@ -406,6 +424,23 @@
           <p><strong>Interactive semantics:</strong> Strict separation of button triggers (&lt;button&gt;) and navigation links (&lt;a&gt;).</p>
           <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 font-mono text-xs">
             npx github:Emzyjeppp/devflow-rules add dealtech-ui
+          </div>
+        `
+      },
+      'impeccable-design': {
+        title: 'Impeccable Frontend Design & Anti-Patterns',
+        badge: 'impeccable-design',
+        content: `
+          <p><strong>AI Tropes Eliminated:</strong></p>
+          <ul class="list-disc pl-5 space-y-1">
+            <li>No default Inter or generic sans fonts without brand rationale.</li>
+            <li>No generic purple-to-blue background gradients.</li>
+            <li>No card-in-card nesting; use open whitespace and rhythm.</li>
+            <li>No low-contrast gray text on vibrant backgrounds.</li>
+          </ul>
+          <p class="mt-2"><strong>Durable Context:</strong> Establishes <code>PRODUCT.md</code> and <code>DESIGN.md</code> to preserve design truth across sessions.</p>
+          <div class="bg-slate-950 p-3 rounded-lg border border-slate-800 font-mono text-xs">
+            npx github:Emzyjeppp/devflow-rules add impeccable-design
           </div>
         `
       },
