@@ -1,8 +1,64 @@
 # DevFlow Rules
 
-A collection of development rules and ready-to-use skills for AI coding assistants. Designed to build consistent web interfaces, keep code minimal and maintainable, and enforce disciplined git workflows.
+A unified collection of development rules, engineering standards, and ready-to-use skills for AI coding assistants. Designed to build consistent web interfaces, keep code minimal and maintainable, and enforce disciplined git workflows.
 
 This repository consolidates battle-tested practices from DealTech UI, Vibes-Plug, Ponytail, nyancodeid commit conventions, and Humanize Pro into a single, unified ruleset.
+
+## Quick Installation via CLI
+
+You can install DevFlow rules into your project using your preferred package runner or shell script.
+
+### 1. Using NPX (Node.js)
+
+Run interactively in your project root:
+
+```bash
+npx github:Emzyjeppp/devflow-rules init
+```
+
+Or target a specific AI assistant directly:
+
+```bash
+# Cursor (.cursorrules & .cursor/rules/devflow.mdc)
+npx github:Emzyjeppp/devflow-rules init --target=cursor
+
+# Windsurf (.windsurfrules)
+npx github:Emzyjeppp/devflow-rules init --target=windsurf
+
+# Claude Code (CLAUDE.md)
+npx github:Emzyjeppp/devflow-rules init --target=claude
+
+# GitHub Copilot (.github/copilot-instructions.md)
+npx github:Emzyjeppp/devflow-rules init --target=copilot
+
+# Cline / Roo-Code (.clinerules)
+npx github:Emzyjeppp/devflow-rules init --target=cline
+
+# All supported assistants at once
+npx github:Emzyjeppp/devflow-rules init --all
+```
+
+### 2. Using Shell Script (Linux / macOS / WSL)
+
+```bash
+# Default (Cursor)
+curl -fsSL https://raw.githubusercontent.com/Emzyjeppp/devflow-rules/main/install.sh | bash
+
+# Specific target (e.g., windsurf, claude, copilot, cline, all)
+curl -fsSL https://raw.githubusercontent.com/Emzyjeppp/devflow-rules/main/install.sh | bash -s -- all
+```
+
+### 3. Using PowerShell (Windows)
+
+```powershell
+# Default (Cursor)
+irm https://raw.githubusercontent.com/Emzyjeppp/devflow-rules/main/install.ps1 | iex
+
+# Specific target
+& ([scriptblock]::Create((irm https://raw.githubusercontent.com/Emzyjeppp/devflow-rules/main/install.ps1))) -Target all
+```
+
+---
 
 ## Core Principles
 
@@ -13,6 +69,8 @@ This repository consolidates battle-tested practices from DealTech UI, Vibes-Plu
 5. **Natural and Factual Language**: Eliminate artificial AI writing clichés and maintain precise, active, and factual technical communication.
 6. **Zero-Emoji Discipline**: Avoid emojis and decorative symbols in code, user interfaces, commit messages, and documentation.
 
+---
+
 ## Repository Structure
 
 ```text
@@ -21,6 +79,11 @@ devflow-rules/
 |-- LICENSE
 |-- README.md
 |-- RULES.md
+|-- package.json
+|-- install.sh
+|-- install.ps1
+|-- bin/
+|   `-- cli.js
 `-- skills/
     |-- commit-nyancodeid/
     |   `-- SKILL.md
@@ -41,6 +104,8 @@ devflow-rules/
         `-- SKILL.md
 ```
 
+---
+
 ## Skills Catalog
 
 | Skill | Description | Entry Point |
@@ -52,24 +117,21 @@ devflow-rules/
 | `humanize-writing` | Natural, concise, and non-artificial writing guidelines for technical and UI communication. | [skills/humanize-writing/SKILL.md](skills/humanize-writing/SKILL.md) |
 | `no-emoji` | Rules prohibiting decorative symbols and emojis, with inline SVG and text-badge alternatives. | [skills/no-emoji/SKILL.md](skills/no-emoji/SKILL.md) |
 
-## Usage Guidelines
+---
 
-You can integrate these rules into your workflow through several methods depending on your development environment:
+## Managing Individual Skills
 
-### 1. Manual Prompt Injection
-Copy the contents of [RULES.md](RULES.md) or specific `SKILL.md` files directly into your AI coding assistant prompt when starting a task.
+You can also list and install individual skills into your repository:
 
-### 2. Project Rule Configuration (Cursor, Windsurf, Claude Code, Copilot)
-Attach or reference [RULES.md](RULES.md) in your project instruction files:
-- **Cursor**: Copy to `.cursorrules` or `.cursor/rules/`.
-- **Windsurf**: Copy to `.windsurfrules`.
-- **Claude Code**: Copy or link inside `CLAUDE.md`.
-- **GitHub Copilot**: Place into `.github/copilot-instructions.md`.
+```bash
+# List available skills
+npx github:Emzyjeppp/devflow-rules list
 
-### 3. Agentic Skill Directory
-If your AI coding agent supports directory-based skill discovery (such as Antigravity or compatible agentic frameworks), copy the `skills/` folder into your custom skills directory.
+# Add a specific skill to ./skills/
+npx github:Emzyjeppp/devflow-rules add dealtech-ui
+```
 
-> Note: This repository contains markdown-based rules and instructions. Reading or referencing these files does not automatically install runtime packages or external plugins.
+---
 
 ## Prompt Examples
 
@@ -88,6 +150,8 @@ Based on the current git diff, generate a commit message following skills/commit
 Review the modal confirmation messages in this file according to skills/humanize-writing/SKILL.md. Make the text concise, direct, action-oriented, and free of em dashes or artificial filler words.
 ```
 
+---
+
 ## Sources and Attribution
 
 The rules and skills in this repository are adapted from the following open references:
@@ -98,6 +162,8 @@ The rules and skills in this repository are adapted from the following open refe
 - **nyancodeid Commit Guidelines**: Conventional commit message structure by nyancodeid ([Gist nyancodeid](https://gist.github.com/nyancodeid/63f19941c81252bb0cca9c14497cf9f7)).
 - **Humanize Pro**: Natural language writing and AI-tell removal guide by msdanyg ([msdanyg/humanize-pro](https://github.com/msdanyg/humanize-pro)).
 - **Zero-Emoji Discipline**: Standards for symbol-free interfaces and codebases.
+
+---
 
 ## License
 

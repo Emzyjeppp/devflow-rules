@@ -1,0 +1,41 @@
+{
+  "name": "devflow-rules",
+  "version": "1.0.0",
+  "description": "Unified development rules and skills installer for AI coding assistants and CLIs",
+  "main": "bin/cli.js",
+  "bin": {
+    "devflow-rules": "./bin/cli.js"
+  },
+  "files": [
+    "bin",
+    "skills",
+    "RULES.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "ai",
+    "cursor",
+    "windsurf",
+    "claude-code",
+    "copilot",
+    "antigravity",
+    "cline",
+    "devflow",
+    "rules",
+    "skills"
+  ],
+  "author": "Emzyjeppp",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Emzyjeppp/devflow-rules.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Emzyjeppp/devflow-rules/issues"
+  },
+  "homepage": "https://github.com/Emzyjeppp/devflow-rules#readme",
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
