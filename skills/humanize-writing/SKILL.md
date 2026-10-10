@@ -17,7 +17,7 @@ This skill guides the composition of natural, concise, and substance-focused wri
 
 ## Patterns to Avoid
 
-For a full list of artificial writing patterns and clichés, see [references/ai-tells.md](file:///C:/Users/jefry/Downloads/devflow-rules/skills/humanize-writing/references/ai-tells.md).
+For a full list of artificial writing patterns and clichés, see [references/ai-tells.md](references/ai-tells.md).
 
 Key patterns to eliminate:
 - Cliché phrases such as "solid foundation", "paving the way", "revolutionize", "in this fast-paced digital era", "in conclusion".
@@ -26,7 +26,7 @@ Key patterns to eliminate:
 
 ## Channel-Specific Guidance
 
-For in-depth channel guidelines, consult [references/channels.md](file:///C:/Users/jefry/Downloads/devflow-rules/skills/humanize-writing/references/channels.md).
+For in-depth channel guidelines, consult [references/channels.md](references/channels.md).
 
 - **UI Copy & Labels**: Use concise, action-driven verbs ("Save changes", "Delete account", "Invalid password").
 - **Technical Guides**: Use direct step-by-step instructions with clear expected outcomes.

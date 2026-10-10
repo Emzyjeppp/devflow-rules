@@ -20,7 +20,7 @@ Characters such as unicode checkmarks, crosses, decorative stars, or symbol arro
 
 | Visual Requirement | Applied Alternative |
 |---|---|
-| Navigation / Action icons | Inline SVG (`<svg>`) or project icon libraries (Lucide, Heroicons). See examples in [references/svg-icons.md](file:///C:/Users/jefry/Downloads/devflow-rules/skills/no-emoji/references/svg-icons.md). |
+| Navigation / Action icons | Inline SVG (`<svg>`) or project icon libraries (Lucide, Heroicons). See examples in [references/svg-icons.md](references/svg-icons.md). |
 | Status indicators (success / error) | Text-based badges ("Success", "Failed", "Pending") with appropriate CSS styling. |
 | Detail lists | Standard Markdown bullet points (`-`) or HTML `<ul>` / `<li>` elements. |
 | Progress indicators | Descriptive status text ("Loading data...") or CSS animation spinners. |

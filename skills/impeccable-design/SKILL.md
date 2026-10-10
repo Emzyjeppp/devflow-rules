@@ -18,7 +18,7 @@ AI models consistently generate identical visual tropes unless explicitly guided
 5. **Pure Black/White**: Avoid `#000000` and flat `#808080`. Always use subtly tinted darks (e.g. slate, zinc with a hint of blue or warm stone).
 6. **Dated Easing**: Avoid springy or bouncy easing curves; use clean cubic beziers for purposeful, subtle transitions.
 
-For a comprehensive catalog of design anti-patterns, see [references/anti-patterns.md](file:///C:/Users/jefry/Downloads/devflow-rules/skills/impeccable-design/references/anti-patterns.md).
+For a comprehensive catalog of design anti-patterns, see [references/anti-patterns.md](references/anti-patterns.md).
 
 ## Durable Product and Design Truth
 

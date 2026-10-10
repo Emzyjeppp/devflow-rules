@@ -14,6 +14,7 @@ Applies to HTML, CSS, JavaScript, TypeScript, JSX/TSX, Vue, Svelte, server templ
 
 | Reference | Core Principle |
 |---|---|
+| Project Starter | **Primary Foundation**: Use the standardized `project-starter` template to structure new web projects, documenting PRD, tech stack, and rules before coding. |
 | DealTech UI | Concrete UI reference hierarchy (elements, sections, pages); adapting components to product requirements without forcing stack shifts. |
 | Impeccable | Eliminating AI frontend anti-patterns (generic fonts, cliché purple gradients, card-in-card nesting, low-contrast text). |
 | Vibes-Plug | Phased lifecycle connecting planning, implementation, integration, verification, and documentation. |
@@ -24,7 +25,16 @@ Applies to HTML, CSS, JavaScript, TypeScript, JSX/TSX, Vue, Svelte, server templ
 
 Unified policy: Apply appropriate structure for the task scale, fulfill all requested requirements, and select the simplest working implementation.
 
-## 1. Understand the Project Before Modifying It
+## 1. Project Starter as Core Foundation
+
+When building a new web project, always use the starter project template located at the standardized `project-starter` template as the primary foundation. 
+
+Before writing any code, you must:
+1. **Initialize**: Copy the structure and markdown files (`prd.md`, `techstack.md`, `design.md`, `rules.md`, `AGENTS.md`) into your workspace.
+2. **Document First**: Fill out the requirements, technical stack, and design decisions in these documents.
+3. **Adopt Core Principles**: Follow the 6 foundational rules of the starter (R-01 to R-06), which prioritize documented requirements, simplicity, verifiability, consistency, honesty in status, and security.
+
+## 2. Understand the Project Before Modifying It
 
 - Read the entire prompt and requirements thoroughly. Identify the concrete outcome that the user should experience.
 - Inspect related files, data flows, existing components, installed dependencies, configuration files, and project scripts.
@@ -33,7 +43,7 @@ Unified policy: Apply appropriate structure for the task scale, fulfill all requ
 - Make reasonable decisions for minor implementation details. Request clarification only when missing information fundamentally alters core requirements or project scope.
 - Do not assume external packages, APIs, skills, or components exist. Verify compatibility against actual project files and installed versions.
 
-## 2. Choose the Simplest Solution That Meets Requirements
+## 3. Choose the Simplest Solution That Meets Requirements
 
 Follow this decision ladder before writing new code or introducing dependencies:
 
@@ -55,7 +65,7 @@ Concise code must retain input validation, error handling, security, accessibili
 | Responsive layout | CSS Grid, Flexbox, and media queries | Dynamic layout computations strictly require JavaScript. |
 | Multi-variant buttons | Existing button component | Interaction contracts or accessibility states diverge significantly. |
 
-## 3. Use Concrete UI Components as References
+## 4. Use Concrete UI Components as References
 
 Structure UI components across three distinct layers:
 
@@ -74,7 +84,7 @@ Steps when adopting reference components:
 
 When working with a different tech stack than the reference, adapt the visual structure and behavior to your current stack rather than migrating the project.
 
-## 4. Maintain Visual Hierarchy and Component Consistency
+## 5. Maintain Visual Hierarchy and Component Consistency
 
 - Establish content hierarchy, primary color palettes, typography scales, spacing tokens, and component radius before expanding page count.
 - Use existing design tokens (CSS variables or utility classes). Introduce new tokens only when recurring needs arise.
@@ -84,7 +94,7 @@ When working with a different tech stack than the reference, adapt the visual st
 - Use subtle animations to clarify transitions or interaction feedback. Respect user motion preferences (`prefers-reduced-motion`).
 - Design props and component variants around actual usage. Avoid exhaustive speculative configurations.
 
-## 5. Ensure Complete Behavior and Accessibility
+## 6. Ensure Complete Behavior and Accessibility
 
 - Use semantic HTML elements: `<button>` for actions, `<a>` for navigation, and form labels linked to input fields.
 - Provide clear visible focus indicators and ensure all interactions are keyboard accessible.
@@ -95,7 +105,7 @@ When working with a different tech stack than the reference, adapt the visual st
 - For modal dialogs, trap focus appropriately, support Escape key closing, and restore focus to the trigger element on close.
 - Clearly separate mock data from live production endpoints. Never present storage operations as successful before receiving actual confirmation.
 
-## 6. Adapt Workflow to Task Scale
+## 7. Adapt Workflow to Task Scale
 
 | Task Scale | Workflow | Minimum Documentation |
 |---|---|---|
@@ -115,7 +125,7 @@ When working with a different tech stack than the reference, adapt the visual st
 7. **Hardening**: Audit security vulnerabilities, optimize asset loading, verify SEO readiness, and ensure graceful error handling.
 8. **Release & Handover**: Verify production builds, document deployment steps, and finalize documentation.
 
-## 7. Code Quality and Cleanliness
+## 8. Code Quality and Cleanliness
 
 - Complete primary feature paths; do not leave functional placeholders in production code.
 - Avoid duplicate logic, zero-value wrappers, and premature abstractions for single-use functions.
@@ -124,7 +134,7 @@ When working with a different tech stack than the reference, adapt the visual st
 - Enforce type safety and runtime validation on data coming from user inputs, external APIs, or file systems.
 - Maintain resilient error handling that prevents data loss. Never suppress technical errors in a way that obscures root causes.
 
-## 8. Zero-Emoji Discipline
+## 9. Zero-Emoji Discipline
 
 Do not include emojis or decorative unicode symbols in:
 
@@ -146,7 +156,7 @@ Use these alternatives:
 
 Exceptions apply only when explicitly requested by the user, when displaying raw user-generated data, or when editing legacy files where emojis are already established and out of scope for cleanup.
 
-## 9. Commit Message Guidelines
+## 10. Commit Message Guidelines
 
 Commit messages must follow this structure:
 
@@ -185,7 +195,7 @@ fix(auth): handle expired token verification gracefully
 docs(readme): update installation steps and environment variables
 ```
 
-## 10. Natural Technical Writing
+## 11. Natural Technical Writing
 
 Apply clear, concise, and factual writing standards to all UI copy, documentation, and technical explanations:
 
@@ -197,7 +207,7 @@ Apply clear, concise, and factual writing standards to all UI copy, documentatio
 - Preserve factual accuracy and do not fabricate metrics, names, or quotes.
 - Ensure UI messages guide users toward clear actions (e.g., "Enter your email address" instead of "Please proceed with entering your email in this field").
 
-## 11. Pre-Handover Verification
+## 12. Pre-Handover Verification
 
 Run through this checklist before submitting work:
 
@@ -217,6 +227,6 @@ PowerShell emoji verification command:
 Select-String -Path .\path\to\file -Pattern '[\p{Cs}\u2190-\u27BF\u2B00-\u2BFF\uFE0F]'
 ```
 
-## 12. Concrete Delivery
+## 13. Concrete Delivery
 
 Present completed files with a concise summary of changes, usage instructions, and actual verification results. Never claim testing, skill execution, or deployment actions that have not been performed.
