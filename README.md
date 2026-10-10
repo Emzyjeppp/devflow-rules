@@ -105,6 +105,17 @@ devflow-rules/
     |   |-- SKILL.md
     |   `-- references/
     |       `-- svg-icons.md
+    |-- project-starter/
+    |   |-- SKILL.md
+    |   `-- template/
+    |       |-- AGENTS.md
+    |       |-- README.md
+    |       |-- REFERENCES.md
+    |       |-- agents/
+    |       |-- design.md
+    |       |-- prd.md
+    |       |-- rules.md
+    |       `-- techstack.md
     `-- ponytail-lean/
         `-- SKILL.md
 ```
