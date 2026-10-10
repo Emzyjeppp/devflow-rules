@@ -1,8 +1,8 @@
 # DevFlow Rules
 
-A unified collection of development rules, engineering standards, and ready-to-use skills for AI coding assistants. Designed to build consistent web interfaces, keep code minimal and maintainable, and enforce disciplined git workflows.
+A unified collection of development rules, engineering standards, and ready-to-use skills for AI coding assistants. Features a comprehensive Project Starter foundation, designed to build consistent web interfaces, keep code minimal and maintainable, and enforce disciplined git workflows.
 
-This repository consolidates battle-tested practices from DealTech UI, Vibes-Plug, Ponytail, nyancodeid commit conventions, and Humanize Pro into a single, unified ruleset.
+This repository consolidates a standardized Project Starter template and battle-tested practices from DealTech UI, Vibes-Plug, Ponytail, nyancodeid commit conventions, and Humanize Pro into a single, unified ruleset.
 
 ## Quick Installation via CLI
 
@@ -62,12 +62,13 @@ irm https://raw.githubusercontent.com/Emzyjeppp/devflow-rules/main/install.ps1 |
 
 ## Core Principles
 
-1. **Concrete UI Components**: Adopt clear component hierarchies (elements, sections, pages) and adapt them to project-specific architectures.
-2. **Phase-Driven Progression**: Orchestrate development across an 8-phase workflow from PRD specification to production release.
-3. **Lean Solutions (YAGNI)**: Prioritize standard library functions and native platform capabilities before adding external dependencies.
-4. **Structured Commit Messages**: Maintain conventional semantic commit formats with standard types, scopes, subjects, and clear change descriptions.
-5. **Natural and Factual Language**: Eliminate artificial AI writing clichés and maintain precise, active, and factual technical communication.
-6. **Zero-Emoji Discipline**: Avoid emojis and decorative symbols in code, user interfaces, commit messages, and documentation.
+1. **Project Starter Foundation**: Standardize new web applications by utilizing a complete suite of predefined template documents (PRD, Architecture, Rules) before writing code.
+2. **Concrete UI Components**: Adopt clear component hierarchies (elements, sections, pages) and adapt them to project-specific architectures.
+3. **Phase-Driven Progression**: Orchestrate development across an 8-phase workflow from PRD specification to production release.
+4. **Lean Solutions (YAGNI)**: Prioritize standard library functions and native platform capabilities before adding external dependencies.
+5. **Structured Commit Messages**: Maintain conventional semantic commit formats with standard types, scopes, subjects, and clear change descriptions.
+6. **Natural and Factual Language**: Eliminate artificial AI writing clichés and maintain precise, active, and factual technical communication.
+7. **Zero-Emoji Discipline**: Avoid emojis and decorative symbols in code, user interfaces, commit messages, and documentation.
 
 ---
 
@@ -114,6 +115,7 @@ devflow-rules/
 
 | Skill | Description | Entry Point |
 |---|---|---|
+| project-starter | Master foundation template with bundled markdown documents to structure new web projects correctly before coding. | [skills/project-starter/SKILL.md](skills/project-starter/SKILL.md) |
 | `dealtech-ui` | Guidance on selecting and adapting concrete UI components based on element, section, and page hierarchies. | [skills/dealtech-ui/SKILL.md](skills/dealtech-ui/SKILL.md) |
 | `impeccable-design` | Frontend design guidance eliminating AI UI clichés, overused fonts, and nested card layouts. | [skills/impeccable-design/SKILL.md](skills/impeccable-design/SKILL.md) |
 | `devflow-orchestrator` | 8-phase development workflow orchestration from initial requirements (PRD) to release. | [skills/devflow-orchestrator/SKILL.md](skills/devflow-orchestrator/SKILL.md) |
